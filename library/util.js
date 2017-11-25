@@ -62,8 +62,7 @@
 					}
 				}
 
-				return (arr ? "[" : "{") + String(json) + (arr ? "]" :
-						"}");
+				return (arr ? "[" : "{") + String(json) + (arr ? "]" : "}");
 			}
 		}
 	});
