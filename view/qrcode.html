@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js二维码测试</title>
+    <script src="../common/qrcode.min.js"></script>
+
+</head>
+<body>
+<div id="code"></div>
+
+<script>
+    new QRCode(document.getElementById('code'), {
+        width : 96,//设置宽高
+        height : 96
+    }).makeCode('二维码内容，可以是链接地址(会跳转)')
+</script>
+
+</body>
+</html>
