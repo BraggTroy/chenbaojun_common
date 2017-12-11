@@ -1,3 +1,4 @@
+"use strict"
 // JavaScript高级程序设计， JS中高级方法的使用
 // 搜索方法，'.'+方法名+'()'
 
@@ -76,6 +77,40 @@ for (var i = 0; i < animals.length; i++) {
     }).call(animals[i], i);
 }
 // 调用 如： animals[0].print() -> 输出：#0 Lion: King
+
+
+/**
+ * 数组相关的方法 Array
+ * ===========================Array.prototype.fun EcmaScript5.js======================
+ */
+// .every()方法测试数组中的所有元素是否通过了由提供的函数实现的测试。
+function isBelowThreshold(currentValue) {
+    return currentValue < 40;
+}
+var array1 = [1, 30, 39, 29, 10, 13];
+console.log(array1.every(isBelowThreshold));
+console.log(array1.every(i => i < 30));
+
+// .filter()方法创建一个新的数组，其中包含所有通过所提供函数实现的测试的元素。
+function lengthFilter(currentValue) {
+    return currentValue.length > 6 ? currentValue : ''
+}
+var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const result = words.filter(i => i.length > 6);
+console.log(result);
+const result2 = words.filter(lengthFilter);
+console.log(result2);
+
+
+/**
+ * 箭头函数 =>
+ */
+
+
+
+
+
+
 
 
 

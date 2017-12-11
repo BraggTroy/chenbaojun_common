@@ -12,7 +12,7 @@ var ins = document.getElementById("ins")
 var li1 = document.createElement('li')
 ins.insertBefore(li1,ins.childNodes[0])
 
-
+''.trim()
 
 
 
