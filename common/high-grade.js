@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 // JavaScript高级程序设计， JS中高级方法的使用
 // 搜索方法，'.'+方法名+'()'
 
@@ -91,6 +91,7 @@ var array1 = [1, 30, 39, 29, 10, 13];
 console.log(array1.every(isBelowThreshold));
 console.log(array1.every(i => i < 30));
 
+
 // .filter()方法创建一个新的数组，其中包含所有通过所提供函数实现的测试的元素。
 function lengthFilter(currentValue) {
     return currentValue.length > 6 ? currentValue : ''
@@ -102,11 +103,57 @@ const result2 = words.filter(lengthFilter);
 console.log(result2);
 
 
+// 常用循环
+// .map(function(currentValue, index) 生成包含返回值的新的对象
+// .forEach(function(currentValue, index)) 调用数组的每个元素，并将元素传递给回调函数
+// 内部处理，不影响原数组
+var materials = [
+    'Hydrogen',
+    'Helium',
+    'Lithium',
+    'Beryllium'
+];
+materials.map(function(material) {
+    return material.length;
+}); // 有返回值，[8, 6, 7, 9]
+materials.forEach(function(material) {
+    // return material.length;  // 接收不到的
+}); // 无返回值 undefined
+
+
+// .reduce()方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。
+// array.reduce(function(total, currentValue, currentIndex))
+// 方案一
+var arr = [5, 6, 13, 0, 1, 18, 23];
+var sum = arr.reduce((a, b) => a + b);
+// 方案二
+function getSum(total, num) {
+    return total + num;
+}
+arr.reduce(getSum);
+
+
+
 /**
  * 箭头函数 =>
+ * 箭头函数表达式的语法比函数表达式更短，并且不绑定自己的this，arguments，super或 new.target。
+ * 这些函数表达式最适合用于非方法函数，并且它们不能用作构造函数。
+ * 箭头函数没有prototype属性。
+ * 参考网址： https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
  */
+var obj = {
+    i: 10,
+    b: () => console.log(this.i, this),  // 该this指向了window
+    c: function() {
+        console.log( this.i, this)
+    }
+}
+//obj.b();  // undefined
+//obj.c();  // 10, Object {...}
 
-
+// 鉴于 this 是词法层面上的，严格模式中与 this 相关的规则都将被忽略。
+var f = () => {'use strict'; return this};
+//f() === window; // 或全局对象 返回true
 
 
 
