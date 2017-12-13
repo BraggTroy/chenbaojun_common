@@ -22,7 +22,38 @@ ins.insertBefore(li1,ins.childNodes[0])
 
 
 
+// 数据的双向绑定测试
+var obj = {
+    pwd: '123'
+}
+Object.defineProperty(obj,'name', {
+    get: function (val) {
+        console.log('get-val',val)
+        console.log("obj get");
 
+    },
+    set: function (val) {
+        console.log('set-val', val)
+        console.log("obj set");
+        document.getElementById("name-span").innerText = val;
+    }
+})
+Object.defineProperty(obj,'pwd', {
+    get: function (val) {
+        console.log('get-val',val)
+        console.log("obj get");
+
+    },
+    set: function (val) {
+        console.log('set-val', val)
+        console.log("obj set");
+        document.getElementById("name-span").innerText = val;
+    }
+})
+
+document.getElementById("name").addEventListener("keyup", function (e) {
+    obj.name = e.target.value;
+})
 
 
 

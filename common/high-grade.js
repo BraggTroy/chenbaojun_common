@@ -160,4 +160,9 @@ var f = () => {'use strict'; return this};
 
 
 
+/**
+ * 高级程序设计之 Object
+ * 参考网址： https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object
+ *
+ */
 
