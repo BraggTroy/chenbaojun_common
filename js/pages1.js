@@ -12,9 +12,12 @@ var ins = document.getElementById("ins")
 var li1 = document.createElement('li')
 ins.insertBefore(li1,ins.childNodes[0])
 
-''.trim()
+''.trim();
 
-
+/**
+ * prototype
+ */
+var n = $('txtNode').insert('Hello')
 
 // var fd = new Food2('肉',100)
 // console.log(fd)

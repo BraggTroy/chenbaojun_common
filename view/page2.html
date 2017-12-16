@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试2</title>
+    <script src="../common/vue.js"></script>
+
+</head>
+<body>
+<header></header>
+<div class="container">
+    <div class="test1" id="test1">
+        姓名：{{name}}
+        <div>
+            <label>姓名：</label>
+            <input name="name" v-model="name">
+        </div>
+
+        <h4>特性</h4>
+        <div v-bind:id="dynamicId">测试Id</div>
+
+        <span v-bind:is="div">测试div</span>
+
+        <h4>js表达式</h4>
+        <div>{{ ok ? 'YES' : 'NO' }}</div>
+
+
+        <h4>指令</h4>
+        <div v-if="seen">if的条件渲染</div>
+        <button v-on:click="click">点击事件</button>
+        <button v-on:click="rev">倒置</button>
+
+        <h4>计算属性</h4>
+        <p>返回的是："{{ returndate }}" // 下次渲染，只要依赖值不变则读取之前的缓存结果</p>
+        <p>2返回的是："{{ returndate2() }}" // 每次渲染，重新计算</p>
+
+    </div>
+
+
+</div>
+<footer></footer>
+
+<script src="../js/page2.js"></script>
+</body>
+</html>

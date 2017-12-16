@@ -165,4 +165,17 @@ var f = () => {'use strict'; return this};
  * 参考网址： https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object
  *
  */
+// 精确判断一个对象的类型
+var a = [];
+Object.prototype.toString.call(a)  // "[object Array]"
+// Function Number String Null Undefined...
+
+
+
+
+
+
+
+
+
 

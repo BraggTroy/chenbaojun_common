@@ -45,8 +45,9 @@ function sorto() {
         return b-a}); // 降序
     console.log(arrSimple2.join());
 }
-// arr.reverse(); 将数组中元素倒置
-// arr.slice(); arr.concat(); 实现复制数组
+// arr.reverse(); //将数组中元素倒置
+// arr.slice(); arr.concat(); //实现复制数组
+// arr.slice(startIndex,length); //截取数组从startIndex开始的length个元素
 
 
 /**
@@ -62,8 +63,9 @@ function sorto() {
 // 常见状态码
 
 
-
-
+/**
+ * 正则表达式
+ */
 
 
 
