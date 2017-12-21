@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>util方法测试</title>
+
+    <script src="../js/page3.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+
+<script>
+    T.scope = {}
+    T.scope.name = "chen"
+    T.scope.init = function () {
+        T.scope.age = "chen"
+        console.log(this);
+    }
+
+    T.delegate(function () {
+        console.log(this);
+        this.init();
+
+    },T.scope)()
+
+
+
+</script>
+</body>
+</html>
